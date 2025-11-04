@@ -1619,4 +1619,34 @@ input:checked + .slider:before {
     padding: 30px 10px !important;
   }
 }
+/* ----------- Fix arrows in Technology Page (responsive) ----------- */
 
+/* Default desktop styling (keep arrows inline and neat) */
+.tech-flow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 10px;
+}
+
+.arrow {
+  font-size: 2rem;
+  color: #0077b6;
+  margin: 0 10px;
+  transform: translateY(5px);
+}
+
+/* Mobile Fix */
+@media (max-width: 768px) {
+  .tech-flow {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .arrow {
+    transform: rotate(90deg); /* 🔁 makes arrows vertical */
+    margin: 0;
+    font-size: 1.8rem;
+  }
+}
