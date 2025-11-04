@@ -46,5 +46,6 @@ if (form) {
   });
 }
 function toggleMenu() {
-  document.getElementById("navLinks").classList.toggle("active");
+  document.querySelector(".nav-links").classList.toggle("active");
 }
+
