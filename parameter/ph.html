@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aqua Sentinel | pH Level</title>
+    <link rel="stylesheet" href="../style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script defer src="parameter.js"></script>
+</head>
+
+<body class="ph-theme">
+    <nav class="navbar">
+        <a href="index.html" class="brand">
+            <img src="../assets/logo/icons8-water-droplet-96.png" alt="Logo" class="Logo">
+            <span class="brand-name">Aqua Sentinel</span>
+        </a>
+        <div class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="../dashboard.html" class="active">Live Dashboard</a>
+            <a href="../parameters.html">Parameters</a>
+            <a href="../technology.html">Technology</a>
+            <a href="../sustainability.html">Sustainability</a>
+            <a href="../awareness.html">Awareness</a>
+            <a href="../contact.html">Contact</a>
+        </div>
+    </nav>
+    <main class="parameter-page">
+        <h1>💧 pH Level Monitoring</h1>
+        <p class="range">Safe Range: 6.5-8.5</p>
+        <div class="chart-container">
+        <canvas id="phChart"></canvas>
+        </div>
+        <div class="param-info">
+            <p><strong>Current:</strong> <span id="ph-current">--</span></p>
+            <p><strong>Average:</strong> <span id="ph-average">--</span></p>
+            <p><strong>Status:</strong> <span id="ph-status">--</span></p>
+        </div>
+
+        <section class="ai-box">
+            <h3>🤖 AI Insight</h3>
+            <p id="ph-insight">Analyzing pH data...</p>
+        </section>
+
+        <button onclick="window.location.href='../dashboard.html'" class="back-btn">⬅ Back to Dashboard</button>
+    </main>
+</body>
+
+</html>

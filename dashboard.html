@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aqua Sentinel | Live Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="dashboard.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="brand">
+            <img src="assets/logo/icons8-water-droplet-96.png" alt="Logo" class="Logo">
+            <span class="brand-name">Aqua Sentinel</span>
+        </a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="dashboard.html" class="active">Live Dashboard</a>
+            <a href="parameters.html">Parameters</a>
+            <a href="technology.html">Technology</a>
+            <a href="sustainability.html">Sustainability</a>
+            <a href="awareness.html">Awareness</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+    <header class="dashboard-header">
+        <div class="header-left">
+            <h1>🌊 Aqua Sentinel Live Dashboard</h1>
+            <p>Real-Time Water Quality Monitoring</p>
+        </div>
+
+        <div class="header-right">
+            <div class="status-indicator" id="status-indicator"></div>
+            <span id="live-status">Live Mode: ON</span>
+            <span id="current-time"></span>
+        </div>
+    </header>
+    <section class="dashboard-grid">
+        <div class="card" , id="ph-card">
+            <h3>pH Level</h3>
+            <p class="value" , id="ph-value">--</p>
+            <p class="status" id="ph-status">Loading...</p>
+            <a class="view-btn" href="parameter/ph.html" title="Open pH detailed page">View Detailed Chart</a>
+        </div>
+        <div class="card" id="tds-card">
+            <h3>Total Dissolved Solids (TDS)</h3>
+            <p class="value" id="tds-value">--</p>
+            <p class="status" id="tds-status">Loading...</p>
+            <a class="view-btn" href="parameter/tds.html" title="Open pH detailed page">View Detailed Chart</a>
+        </div>
+
+        <div class="card" id="turbidity-card">
+            <h3>Turbidity</h3>
+            <p class="value" id="turbidity-value">--</p>
+            <p class="status" id="turbidity-status">Loading...</p>
+            <a class="view-btn" href="parameter/turbidity.html" title="Open pH detailed page">View Detailed Chart</a>
+        </div>
+
+        <div class="card" id="do-card">
+            <h3>Dissolved Oxygen (DO)</h3>
+            <p class="value" id="do-value">--</p>
+            <p class="status" id="do-status">Loading...</p>
+            <a class="view-btn" href="parameter/do.html" title="Open pH detailed page">View Detailed Chart</a>
+        </div>
+
+        <div class="card" id="temp-card">
+            <h3>Temperature</h3>
+            <p class="value" id="temp-value">--</p>
+            <p class="status" id="temp-status">Loading...</p>
+            <a class="view-btn" href="parameter/temperature.html" title="Open pH detailed page">View Detailed Chart</a>
+        </div>
+        <div class="card" id="metal-card">
+            <h3>Heavy Metals</h3>
+            <p class="value" id="metal-value">--</p>
+            <p class="status" id="metal-status">Loading...</p>
+            <a class="view-btn" href="parameter/metals.html" title="Open pH detailed page">View Detailed Chart</a>
+        </div>
+    </section>
+    <div id="param-modal" class="param-modal">
+        <div class="param-modal-content">
+            <span id="close-modal" class="close-btn">&times;</span>
+            <h2 id="param-title">Parameter Detail</h2>
+
+            <div class="param-stats">
+                <p><strong>Current:</strong> <span id="param-current">--</span></p>
+                <p><strong>Average:</strong> <span id="param-average">--</span></p>
+                <p><strong>Status:</strong> <span id="param-status">--</span></p>
+            </div>
+
+            <canvas id="paramChart"></canvas>
+
+            <div class="ai-insight">
+                <h3>🤖 AI Insights</h3>
+                <p id="param-ai-text">Analyzing data...</p>
+            </div>
+        </div>
+    </div>
+    <section class="insights-section">
+        <h2>🔍 System Insights</h2>
+        <p id="insight-text">Analyzing real-time water parameters...</p>
+    </section>
+
+    <section class="control-panel">
+        <div class="toggle-container">
+            <span>Live Mode:</span>
+            <label class="switch">
+                <input type="checkbox" id="live-toggle" checked>
+                <span class="slider"></span>
+            </label>
+            <div id="live-indicator" class="indicator active"></div>
+        </div>
+    </section>
+    <section class="summary">
+        <h2>🌊 Overall Water Quality</h2>
+        <p id="overall-status">Analyzing...</p>
+    </section>
+</body>
+
+</html>

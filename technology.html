@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aqua Sentinel | Technology</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="index.html" class="brand">
+      <img src="assets/logo/icons8-water-droplet-96.png" alt="Logo" class="logo">
+      <span class="brand-name">Aqua Sentinel</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="dashboard.html">Live Dashboard</a>
+      <a href="parameters.html">Parameters</a>
+      <a href="technology.html" class="active">Technology</a>
+      <a href="sustainability.html">Sustainability</a>
+      <a href="awareness.html">Awareness</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="tech-header">
+    <h1>⚙️ Our Technology</h1>
+    <p>Where intelligent hardware meets real-time water monitoring.</p>
+  </header>
+
+  <!-- Working Principle -->
+  <section class="tech-overview">
+    <h2>Working Principle</h2>
+    <p>
+      Aqua Sentinel operates using a network of embedded sensors connected to a NodeMCU ESP8266.
+      The microcontroller collects real-time data from all sensors, processes it, and transmits it wirelessly
+      to the Aqua Sentinel Dashboard, where the data is analyzed and visualized for decision-making.
+    </p>
+
+    <div class="tech-flow">
+      <div class="flow-item">
+        <img src="assets/icons/sensors.png" alt="Sensors">
+        <p>Sensors</p>
+      </div>
+      <div class="arrow">➜</div>
+      <div class="flow-item">
+        <img src="assets/icons/esp8622.png" alt="NodeMCU">
+        <p>NodeMCU ESP8266</p>
+      </div>
+      <div class="arrow">➜</div>
+      <div class="flow-item">
+        <img src="assets/icons/IC2 LCD.PNG" alt="I2C">
+        <p>I2C & LCD Module</p>
+      </div>
+      <div class="arrow">➜</div>
+      <div class="flow-item">
+        <img src="assets/icons/16x2 LCD.PNG" alt="Display">
+        <p>16x2 Display</p>
+      </div>
+      <div class="arrow">➜</div>
+      <div class="flow-item">
+        <p>Web Dashboard</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hardware Section -->
+  <section class="hardware">
+    <h2>Hardware Components</h2>
+    <div class="hardware-grid">
+      <div class="hardware-card">
+        <img src="assets/icons/esp8622.png" alt="NodeMCU">
+        <h3>NodeMCU ESP8266</h3>
+        <p>The central microcontroller that collects sensor data and sends it to the web interface via Wi-Fi.</p>
+      </div>
+      <div class="hardware-card">
+        <img src="assets/icons/IC2 LCD.PNG" alt="I2C Module">
+        <h3>I2C Module</h3>
+        <p>Facilitates communication between the NodeMCU and LCD with reduced wiring complexity.</p>
+      </div>
+      <div class="hardware-card">
+        <img src="assets/icons/16x2 LCD.PNG" alt="LCD">
+        <h3>LCD 16x2 Display</h3>
+        <p>Displays live readings directly from sensors for on-site viewing and verification.</p>
+      </div>
+      <div class="hardware-card">
+        <img src="assets/icons/LED .PNG" alt="LEDs">
+        <h3>LED Indicators</h3>
+        <p>Green and Red LEDs indicate safe or unsafe water quality conditions in real-time.</p>
+      </div>
+      <div class="hardware-card">
+        <img src="assets/icons/pushon .png" alt="Switch">
+        <h3>Push Switch</h3>
+        <p>Used for resetting or calibrating sensors during testing or field operations.</p>
+      </div>
+      <div class="hardware-card">
+        <img src="assets/icons/breadboard and connecting.png" alt="Breadboard">
+        <h3>Breadboard & Wires</h3>
+        <p>Enable flexible connections between components for easy prototyping and debugging.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sensors Section -->
+  <section class="sensor-section">
+    <h2>Sensors Used</h2>
+    <div class="sensor-grid">
+      <div class="sensor-card">
+        <img src="assets/icons/ph sensor.png" alt="pH Sensor">
+        <h3>pH Sensor</h3>
+        <p>Monitors acidity and alkalinity levels to maintain safe water conditions.</p>
+      </div>
+      <div class="sensor-card">
+        <img src="assets/icons/tds sensor.png" alt="TDS Sensor">
+        <h3>TDS Sensor</h3>
+        <p>Measures dissolved salts and minerals to determine water purity.</p>
+      </div>
+      <div class="sensor-card">
+        <img src="assets/icons/turbidity sensor.png" alt="Turbidity Sensor">
+        <h3>Turbidity Sensor</h3>
+        <p>Analyzes water clarity and detects suspended particles.</p>
+      </div>
+      <div class="sensor-card">
+        <img src="assets/icons/do sensor.png" alt="DO Sensor">
+        <h3>Dissolved Oxygen Sensor</h3>
+        <p>Tracks oxygen levels essential for aquatic organisms.</p>
+      </div>
+      <div class="sensor-card">
+        <img src="assets/icons/temprature sensor.png" alt="Temperature Sensor">
+        <h3>Temperature Sensor</h3>
+        <p>Monitors water temperature to ensure stable environmental conditions.</p>
+      </div>
+      <div class="sensor-card">
+        <img src="assets/icons/heavy metal sensor.png" alt="Heavy Metal Sensor">
+        <h3>Heavy Metal Sensor</h3>
+        <p>Detects presence of toxic elements like lead, mercury, and arsenic in water.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Data Flow Section -->
+  <section class="dataflow">
+    <h2>Data Flow Architecture</h2>
+    <p>
+      Sensor readings are captured by the NodeMCU and displayed locally on the LCD.
+      The ESP8266 then transmits the same data through Wi-Fi to the Aqua Sentinel dashboard,
+      where it is processed, color-coded, and displayed for users to interpret instantly.
+    </p>
+  </section>
+  <section class="future">
+    <h2>Future Integrations</h2>
+    <p>
+      Aqua Sentinel is designed with scalability in mind. Our goal is to evolve beyond local monitoring into a globally
+      connected, intelligent water quality ecosystem powered by data and AI.
+    </p>
+
+    <div class="future-grid">
+      <div class="future-card">
+        <h3>Cloud Data Storage</h3>
+        <p>Future updates will enable long-term data logging on cloud servers for trend analysis and reporting.</p>
+      </div>
+      <div class="future-card">
+        <h3>AI-Based Prediction</h3>
+        <p>Machine learning algorithms will predict contamination patterns and alert authorities before crises occur.
+        </p>
+      </div>
+      <div class="future-card">
+        <h3>Mobile App Integration</h3>
+        <p>Users will be able to view real-time data and alerts directly on their smartphones through an Android app.
+        </p>
+      </div>
+      <div class="future-card">
+        <h3>IoT Network Expansion</h3>
+        <p>Multiple Aqua Sentinel units can be connected regionally to form an integrated water safety network.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="oooter">
+    <p>© 2025 Aqua Sentinel | Innovated at Thapar Institute of Engineering & Technology</p>
+  </footer>
+
+</body>
+
+</html>

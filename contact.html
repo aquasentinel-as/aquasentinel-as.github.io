@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aqua Sentinel | Contact</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+
+<body class="contact-page">
+
+    <nav class="navbar">
+        <a href="index.html" class="brand">
+            <img src="assets/logo/icons8-water-droplet-96.png" alt="Logo" class="Logo">
+            <span class="brand-name">Aqua Sentinel</span>
+        </a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="dashboard.html">Live Dashboard</a>
+            <a href="parameters/ph.html">Parameters</a>
+            <a href="technology.html">Technology</a>
+            <a href="sustainability.html">Sustainability</a>
+            <a href="awareness.html">Awareness</a>
+            <a href="contact.html" class="active">Contact</a>
+        </div>
+    </nav>
+
+    <header class="contact-hero">
+        <h2>Let’s Build a Cleaner Tomorrow Together 🌍</h2>
+        <p>Have questions, ideas, or collaboration plans?<br>
+            We’d love to hear from you!</p>
+    </header>
+
+    <section class="contact-info">
+        <div class="contact-card">
+            <img src="https://img.icons8.com/fluency/96/000000/new-post.png" alt="Email">
+            <h3>Email Us</h3>
+            <p><a href="mailto:info.aquasentinel.as@gmail.com">info.aquasentinel.as@gmail.com</a></p>
+        </div>
+
+        <div class="contact-card">
+            <img src="https://img.icons8.com/color/96/000000/marker.png" alt="Location">
+            <h3>Visit Us</h3>
+            <p>Thapar Institute of Engineering & Technology<br>Patiala, Punjab, India</p>
+        </div>
+    </section>
+
+    <section class="map-section">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3430.707734618245!2d76.36261167544407!3d30.354412206705065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391028b0e5c3cf91%3A0x589f32e6a53f0b4!2sThapar%20Institute%20of%20Engineering%20and%20Technology!5e0!3m2!1sen!2sin!4v1704970871897!5m2!1sen!2sin"
+            width="100%" height="350" style="border:0;" allowfullscreen loading="lazy"></iframe>
+    </section>
+
+    <section class="contact-form">
+        <h2>Send Us a Message</h2>
+        <form action="https://formspree.io/f/xanlgejg" method="POST" id="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+    </section>
+
+    <div class="social-links">
+        <a href="#" title="LinkedIn (Coming Soon)">
+            <img src="https://img.icons8.com/color/48/linkedin.png" alt="LinkedIn" />
+        </a>
+    </div>
+
+    <footer class="oooter">
+        <p>© 2025 Aqua Sentinel | Built by Innovators of Thapar Institute</p>
+    </footer>
+    <script>
+        const form = document.getElementById("contact-form");
+        form.addEventListener("submit", function (e) {
+            setTimeout(() => {
+                alert("✅ Message sent successfully! We'll get back to you soon.");
+            }, 300);
+        });
+    </script>
+</body>
+
+</html>
