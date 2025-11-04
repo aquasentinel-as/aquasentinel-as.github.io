@@ -1619,34 +1619,58 @@ input:checked + .slider:before {
     padding: 30px 10px !important;
   }
 }
-/* ----------- Fix arrows in Technology Page (responsive) ----------- */
+/* =========================
+   TECH FLOW — FORCE FIX
+   Paste at the VERY BOTTOM of style.css
+   ========================= */
 
-/* Default desktop styling (keep arrows inline and neat) */
 .tech-flow {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: nowrap;
-  gap: 10px;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 16px !important;
+  flex-wrap: nowrap !important;           /* desktop default stays inline */
 }
 
-.arrow {
-  font-size: 2rem;
-  color: #0077b6;
-  margin: 0 10px;
-  transform: translateY(5px);
+/* force flow items to be column inside each box */
+.tech-flow .flow-item {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 6px !important;
 }
 
-/* Mobile Fix */
+/* Arrow base */
+.tech-flow > .arrow {
+  display: inline-block !important;
+  font-size: 1.8rem !important;
+  color: #0077b6 !important;
+  line-height: 1 !important;
+  margin: 0 8px !important;
+  transition: transform 0.25s ease, color 0.2s ease !important;
+  user-select: none !important;
+  -webkit-user-select: none !important;
+}
+
+/* hover/active effect */
+.tech-flow > .arrow:hover {
+  transform: scale(1.15) !important;
+  color: #005f8f !important;
+}
+
+/* MOBILE: stack flow vertically and rotate arrows downwards */
 @media (max-width: 768px) {
   .tech-flow {
-    flex-direction: column;
-    gap: 20px;
+    flex-direction: column !important;
+    gap: 20px !important;
+    align-items: center !important;
   }
 
-  .arrow {
-    transform: rotate(90deg); /* 🔁 makes arrows vertical */
-    margin: 0;
-    font-size: 1.8rem;
+  /* arrows become full-width separators and point down */
+  .tech-flow > .arrow {
+    transform: rotate(90deg) !important;    /* arrow points downward */
+    margin: 0 !important;
+    font-size: 1.6rem !important;
   }
 }
