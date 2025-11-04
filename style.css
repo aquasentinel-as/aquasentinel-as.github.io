@@ -1426,288 +1426,193 @@ input:checked + .slider:before {
   padding-left: 500px;
   color: #0077b6;
   font-size: 1.5rem;
-
 }
-/* ===========================
-   🌐 MOBILE RESPONSIVE FIXES
-   =========================== */
+/* ============================================================
+   🌐 AQUA SENTINEL — FINAL UNIVERSAL RESPONSIVE DESIGN (ALL PAGES)
+   ============================================================ */
 
-html, body {
-  width: 100%;
-  overflow-x: auto !important;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-/* ----- Navbar fix ----- */
-.navbar {
-  flex-wrap: wrap;
-  padding: 10px 15px;
-}
-
-.nav-links {
-  flex-direction: column;
-  width: 100%;
-  background: #0077b6;
-  text-align: center;
-}
-
-.nav-links a {
-  padding: 10px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-/* ----- Founder/Team Section fix ----- */
-.founder-section,
-.team-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 20px;
-}
-
-.founder-section img,
-.team-section img {
-  max-width: 90%;
-  height: auto;
-  border-radius: 10px;
-  margin-bottom: 15px;
-}
-
-/* ----- General content scaling ----- */
-section, div, p, img {
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
-img {
-  height: auto;
-}
-
-/* ----- Button scaling ----- */
-button, .btn {
-  width: auto;
-  max-width: 90%;
-  font-size: 0.9rem;
-}
-
-/* ----- Dashboard / Parameter blocks ----- */
-.dashboard, .parameters, .data-box {
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
-}
-
-.data-box {
-  width: 90%;
-  margin-bottom: 15px;
-}
-
-/* ----- Text size scaling ----- */
-h1 {
-  font-size: 1.8rem;
-}
-
-h2 {
-  font-size: 1.4rem;
-}
-
-p {
-  font-size: 1rem;
-}
-
-/* ----- Footer fix ----- */
-footer {
-  flex-direction: column;
-  text-align: center;
-  padding: 15px;
-}
-
-/* ----- Media Query (for mobile phones) ----- */
 @media (max-width: 768px) {
-  body {
+
+  html, body {
+    width: 100%;
+    overflow-x: hidden !important;
     font-size: 0.95rem;
   }
 
+  * {
+    box-sizing: border-box;
+  }
+
+  /* ----- NAVBAR ----- */
   .navbar {
-    flex-direction: column;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    padding: 10px 20px !important;
+  }
+
+  .hamburger {
+    display: block !important;
+    font-size: 1.8rem !important;
+    margin-left: auto !important;
+    cursor: pointer !important;
   }
 
   .nav-links {
-    display: none;
+    display: none !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    background: #0077b6 !important;
+    border-radius: 0 0 12px 12px !important;
   }
 
   .nav-links.active {
-    display: flex;
-  }
-
-  .hero-section, .about, .services, .founder-section {
-    padding: 15px;
-  }
-}
-/* ===============================================
-   📱 UNIVERSAL MOBILE RESPONSIVE FIX FOR ALL PAGES
-   =============================================== */
-
-html, body {
-  width: 100%;
-  overflow-x: hidden !important;
-}
-
-/* -------- General Sections -------- */
-section, div, img, p {
-  max-width: 100%;
-  box-sizing: border-box;
-}
-
-img {
-  height: auto;
-  border-radius: 10px;
-}
-
-/* -------- HOME PAGE: Team / Founder Section -------- */
-.team-section {
-  text-align: center;
-  padding: 20px;
-}
-
-.team-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-.team-member {
-  flex: 1 1 250px;
-  max-width: 90%;
-  background: #f8f8f8;
-  border-radius: 10px;
-  padding: 15px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
-/* -------- DASHBOARD PAGE -------- */
-.dashboard-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-  padding: 15px;
-}
-
-.dashboard-grid .card {
-  flex: 1 1 260px;
-  max-width: 90%;
-  text-align: center;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
-  background: white;
-}
-
-.dashboard-grid .card h3 {
-  font-size: 1.1rem;
-}
-
-/* -------- PARAMETERS PAGE -------- */
-.param-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  padding: 15px;
-}
-
-.param-card {
-  flex: 1 1 250px;
-  max-width: 90%;
-  background: white;
-  text-align: center;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
-}
-
-/* -------- TECHNOLOGY PAGE -------- */
-.hardware-grid, .sensor-grid, .future-grid, .tech-flow {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  padding: 15px;
-}
-
-.hardware-card, .sensor-card, .future-card, .flow-item {
-  flex: 1 1 250px;
-  max-width: 90%;
-  text-align: center;
-  background: white;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
-.flow-item img, .hardware-card img, .sensor-card img {
-  max-width: 100px;
-  height: auto;
-}
-
-/* -------- Text & Headings -------- */
-h1, h2, h3 {
-  word-wrap: break-word;
-}
-
-p {
-  font-size: 1rem;
-  line-height: 1.4;
-}
-
-/* -------- RESPONSIVE BREAKPOINT -------- */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
+    display: flex !important;
   }
 
   .nav-links a {
-    padding: 10px 0;
+    text-align: center !important;
+    padding: 10px 0 !important;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
   }
 
-  .dashboard-grid .card,
-  .param-card,
-  .hardware-card,
-  .sensor-card,
-  .future-card,
-  .team-member {
-    flex: 1 1 100%;
-    max-width: 95%;
-  }
-
+  /* ----- HERO / HOME ----- */
   .hero-section {
-    padding: 30px 15px;
-    text-align: center;
+    flex-direction: column !important;
+    text-align: center !important;
+    padding: 60px 20px !important;
+    height: auto !important;
   }
 
   .hero-section h1 {
-    font-size: 1.6rem;
+    font-size: 1.8rem !important;
+    letter-spacing: 3px !important;
   }
 
   .hero-section p {
-    font-size: 1rem;
+    font-size: 1rem !important;
+    line-height: 1.5 !important;
   }
 
-  .founder-section img {
-    width: 80%;
-    margin: 0 auto;
+  /* ----- ABOUT / MISSION ----- */
+  .about-container {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 25px !important;
+  }
+
+  .mission-section {
+    padding: 40px 20px !important;
+  }
+
+  /* ----- TEAM / FOUNDERS ----- */
+  .team-container {
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 20px !important;
+  }
+
+  .team-member {
+    flex: 1 1 100% !important;
+    max-width: 90% !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+  }
+
+  /* ----- DASHBOARD ----- */
+  .dashboard-grid {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 20px !important;
+    padding: 20px !important;
+  }
+
+  .dashboard-grid .card {
+    flex: 1 1 100% !important;
+    max-width: 90% !important;
+    margin: 0 auto !important;
+  }
+
+  /* ----- PARAMETERS ----- */
+  .param-grid {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 20px !important;
+  }
+
+  .param-card {
+    flex: 1 1 100% !important;
+    max-width: 90% !important;
+    text-align: center !important;
+  }
+
+  /* ----- TECHNOLOGY ----- */
+  .hardware-grid,
+  .sensor-grid,
+  .future-grid,
+  .tech-flow {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 20px !important;
+  }
+
+  .hardware-card,
+  .sensor-card,
+  .future-card,
+  .flow-item {
+    flex: 1 1 100% !important;
+    max-width: 90% !important;
+    padding: 20px !important;
+    text-align: center !important;
+  }
+
+  /* ----- SUSTAINABILITY / AWARENESS ----- */
+  .impact-grid,
+  .future-impact-grid,
+  .awareness-cards {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 20px !important;
+  }
+
+  .impact-card,
+  .future-impact-card,
+  .awareness-cards .card {
+    flex: 1 1 100% !important;
+    max-width: 90% !important;
+  }
+
+  /* ----- CONTACT PAGE ----- */
+  .contact-info {
+    flex-direction: column !important;
+    align-items: center !important;
+    padding: 20px !important;
+    gap: 20px !important;
+  }
+
+  .contact-card {
+    width: 90% !important;
+  }
+
+  #contact-form {
+    width: 90% !important;
+    margin: 0 auto !important;
+  }
+
+  /* ----- FOOTER ----- */
+  .footer-container {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 20px !important;
+  }
+
+  footer {
+    padding: 30px 10px !important;
   }
 }
