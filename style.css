@@ -1505,11 +1505,14 @@ input:checked + .slider:before {
   }
 
   /* ----- TEAM / FOUNDERS ----- */
-  .team-container {
-    flex-wrap: wrap !important;
-    justify-content: center !important;
-    gap: 20px !important;
-  }
+.team-container {
+  height: auto !important;
+  overflow: visible !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 20px !important;
+}
 
   .team-member {
     flex: 1 1 100% !important;
@@ -1616,3 +1619,4 @@ input:checked + .slider:before {
     padding: 30px 10px !important;
   }
 }
+
