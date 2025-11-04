@@ -1426,4 +1426,125 @@ input:checked + .slider:before {
   padding-left: 500px;
   color: #0077b6;
   font-size: 1.5rem;
+
+}
+/* ===========================
+   🌐 MOBILE RESPONSIVE FIXES
+   =========================== */
+
+html, body {
+  width: 100%;
+  overflow-x: auto !important;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* ----- Navbar fix ----- */
+.navbar {
+  flex-wrap: wrap;
+  padding: 10px 15px;
+}
+
+.nav-links {
+  flex-direction: column;
+  width: 100%;
+  background: #0077b6;
+  text-align: center;
+}
+
+.nav-links a {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* ----- Founder/Team Section fix ----- */
+.founder-section,
+.team-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.founder-section img,
+.team-section img {
+  max-width: 90%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* ----- General content scaling ----- */
+section, div, p, img {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img {
+  height: auto;
+}
+
+/* ----- Button scaling ----- */
+button, .btn {
+  width: auto;
+  max-width: 90%;
+  font-size: 0.9rem;
+}
+
+/* ----- Dashboard / Parameter blocks ----- */
+.dashboard, .parameters, .data-box {
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.data-box {
+  width: 90%;
+  margin-bottom: 15px;
+}
+
+/* ----- Text size scaling ----- */
+h1 {
+  font-size: 1.8rem;
+}
+
+h2 {
+  font-size: 1.4rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+/* ----- Footer fix ----- */
+footer {
+  flex-direction: column;
+  text-align: center;
+  padding: 15px;
+}
+
+/* ----- Media Query (for mobile phones) ----- */
+@media (max-width: 768px) {
+  body {
+    font-size: 0.95rem;
+  }
+
+  .navbar {
+    flex-direction: column;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hero-section, .about, .services, .founder-section {
+    padding: 15px;
+  }
 }
