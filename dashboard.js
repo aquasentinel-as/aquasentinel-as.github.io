@@ -254,17 +254,39 @@ function controlledUpdate() {
   if (liveMode) updateDashboardCore();
 }
 
-// ----- Wire up the live toggle if present -----
 const toggleEl = document.getElementById("live-toggle");
 const indicator = document.getElementById("live-indicator");
+const liveStatusText = document.getElementById("live-status"); // the text near time
+
 if (toggleEl) {
   toggleEl.addEventListener("change", () => {
     liveMode = toggleEl.checked;
+
+    // Update indicator color and glow
     if (indicator) {
-      if (liveMode) { indicator.classList.add("active"); indicator.style.background = "#00ff88"; indicator.style.boxShadow = "0 0 10px #00ff88"; }
-      else { indicator.classList.remove("active"); indicator.style.background = "#ff4d4d"; indicator.style.boxShadow = "0 0 8px #ff4d4d"; }
+      if (liveMode) {
+        indicator.classList.add("active");
+        indicator.style.background = "#00ff88";
+        indicator.style.boxShadow = "0 0 10px #00ff88";
+      } else {
+        indicator.classList.remove("active");
+        indicator.style.background = "#ff4d4d";
+        indicator.style.boxShadow = "0 0 8px #ff4d4d";
+      }
+    }
+
+    // ✅ Update the header text near clock
+    if (liveStatusText) {
+      liveStatusText.textContent = liveMode ? "Live Mode: ON" : "Live Mode: OFF";
+      liveStatusText.style.color = liveMode ? "#00ff88" : "#c92020ff";
     }
   });
+}
+
+// also set initial state on load
+if (liveStatusText) {
+  liveStatusText.textContent = liveMode ? "Live Mode: ON" : "Live Mode: OFF";
+  liveStatusText.style.color = liveMode ? "#00ff88" : "#ff4d4d";
 }
 
 // ----- Start update loop -----
