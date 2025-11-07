@@ -13,7 +13,7 @@
 
     <nav class="navbar">
         <a href="index.html" class="brand">
-            <img src="assets/logo/logo.png" alt="Logo" class="Logo">
+            <img src="assets/logo/icons8-water-droplet-96.png" alt="Logo" class="Logo">
             <span class="brand-name">Aqua Sentinel</span>
         </a>
         <div class="hamburger" onclick="toggleMenu()">
@@ -84,8 +84,16 @@
         });
     </script>
     <script src="script.js" defer></script>
+    <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.getElementById("nav-links");
+
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  });
+</script>
 </body>
 
 </html>
-
-
