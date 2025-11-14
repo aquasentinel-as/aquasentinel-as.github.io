@@ -76,25 +76,33 @@
         <p>© 2025 Aqua Sentinel | Built by Innovators of Thapar Institute</p>
     </footer>
     <script>
-        const form = document.getElementById("contact-form");
-        form.addEventListener("submit", function (e) {
-            setTimeout(() => {
-                alert("✅ Message sent successfully! We'll get back to you soon.");
-            }, 300);
+        function toggleMenu() {
+            const navLinks = document.getElementById("nav-links");
+            if (navLinks) {
+                navLinks.classList.toggle("active");
+            }
+        }
+        document.addEventListener("DOMContentLoaded", () => {
+            const navLinks = document.getElementById("nav-links");
+            if (navLinks) {
+                navLinks.querySelectorAll("a").forEach(link => {
+                    link.addEventListener("click", () => {
+                        navLinks.classList.remove("active");
+                    });
+                });
+            }
         });
+        const form = document.getElementById("contact-form");
+        if (form) {
+            form.addEventListener("submit", function (e) {
+                setTimeout(() => {
+                    alert("✅ Message sent successfully! We'll get back to you soon.");
+                }, 300);
+            });
+        }
     </script>
-    <script src="script.js" defer></script>
-    <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const hamburger = document.getElementById("hamburger");
-    const navLinks = document.getElementById("nav-links");
-
-    hamburger.addEventListener("click", () => {
-      navLinks.classList.toggle("active");
-    });
-  });
-</script>
 </body>
 
 </html>
+
 
